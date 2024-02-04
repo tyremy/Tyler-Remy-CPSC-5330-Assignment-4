@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tyler_Remy_CPSC_5330_Assignment_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daytime" translatesAutoresizingMaskIntoConstraints="NO" id="c5V-E3-9gj">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nighttime" translatesAutoresizingMaskIntoConstraints="NO" id="K7y-PU-LA6">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saF-87-FqH">
+                                <rect key="frame" x="170.66666666666666" y="109" width="52" height="26.333333333333343"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkF-cH-j3r">
+                                <rect key="frame" x="40" y="318" width="313" height="216"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="tintColor" systemColor="viewFlipsideBackgroundColor"/>
+                                <connections>
+                                    <action selector="timeSelection:" destination="BYZ-38-t0r" eventType="valueChanged" id="BAM-g6-Oka"/>
+                                </connections>
+                            </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="g7j-Eg-Ozy" userLabel="Bottom Section">
+                                <rect key="frame" x="0.0" y="747.33333333333337" width="393" height="74.666666666666629"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2H-kJ-6DP">
+                                        <rect key="frame" x="166" y="0.0" width="61.333333333333343" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Start">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="countdownButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cfb-Mb-RnG"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lh6-5u-TNg">
+                                        <rect key="frame" x="176" y="54.333333333333265" width="41.333333333333343" height="20.333333333333336"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="c5V-E3-9gj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3ZV-od-Cpz"/>
+                            <constraint firstItem="K7y-PU-LA6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="HGW-Rb-szE"/>
+                            <constraint firstItem="c5V-E3-9gj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="HmM-Lq-tWS"/>
+                            <constraint firstItem="gkF-cH-j3r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Qkr-0s-10Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g7j-Eg-Ozy" secondAttribute="trailing" id="RGy-fa-rvx"/>
+                            <constraint firstItem="K7y-PU-LA6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zo2-ma-dbm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gkF-cH-j3r" secondAttribute="trailing" constant="40" id="ZxF-jF-4ft"/>
+                            <constraint firstAttribute="bottom" secondItem="K7y-PU-LA6" secondAttribute="bottom" id="bbj-nL-7hM"/>
+                            <constraint firstAttribute="bottom" secondItem="g7j-Eg-Ozy" secondAttribute="bottom" constant="30" id="gyc-vU-6j4"/>
+                            <constraint firstItem="c5V-E3-9gj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iJo-Ns-Avz"/>
+                            <constraint firstItem="g7j-Eg-Ozy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kVl-A6-gRq"/>
+                            <constraint firstItem="gkF-cH-j3r" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="l2d-YL-fpi"/>
+                            <constraint firstAttribute="bottom" secondItem="c5V-E3-9gj" secondAttribute="bottom" id="oIl-hy-drl"/>
+                            <constraint firstItem="saF-87-FqH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="phN-Ny-JwQ"/>
+                            <constraint firstItem="saF-87-FqH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sVL-Fs-2tQ"/>
+                            <constraint firstItem="K7y-PU-LA6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="saz-QB-HNO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="StartStopButton" destination="B2H-kJ-6DP" id="jON-Nt-EWY"/>
+                        <outlet property="countdownDisplay" destination="Lh6-5u-TNg" id="J76-kv-BBk"/>
+                        <outlet property="dayBackground" destination="c5V-E3-9gj" id="Kbc-eO-xX9"/>
+                        <outlet property="nightBackground" destination="K7y-PU-LA6" id="so2-sh-Acx"/>
+                        <outlet property="picker" destination="gkF-cH-j3r" id="hwd-ZL-geO"/>
+                        <outlet property="timeLabel" destination="saF-87-FqH" id="you-zu-2bY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="daytime" width="768" height="1280"/>
+        <image name="nighttime" width="3000" height="5441"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
